@@ -9,6 +9,11 @@
 
     <link rel="stylesheet" href="./src/css/reset.css">
     <link rel="stylesheet" href="./src/css/style.css">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -22,16 +27,16 @@
 
         <nav class="header-conteudo">
             <ul>
-                <li id="#home"><a href="#">Home</a></li>
-                <li id="#sobre"><a href="#">Sobre</a></li>
-                <li id="#catalogo"><a href="#">Catálogo</a></li>
-                <li id="#contato"><a href="#">Contato</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="home" id="home">
-        <a href="#" class="seta-voltar opacidade">
+        <a href="#" class="seta-voltar">
             <img src="./src/images/seta esquerda.png" alt="seta voltar" class="imagem-seta">
         </a>
 
@@ -92,7 +97,9 @@
         <div class="item">
             <h3>Sobre Nós</h3>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit debitis voluptatem facere molestias labore fugiat nam sint, consectetur in at excepturi ducimus pariatur, tempora quo aperiam nesciunt magnam consequuntur earum.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit debitis voluptatem facere
+                molestias labore fugiat nam sint, consectetur in at excepturi ducimus pariatur, tempora quo aperiam
+                nesciunt magnam consequuntur earum.
             </p>
         </div>
         <div class="imagem-direita"></div>
@@ -101,14 +108,153 @@
         <div class="item">
             <h3>Especialidades</h3>
             <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus quam quasi ea, quia atque illum dolor totam dolore maiores doloremque tempore corporis consequuntur, minima facere corrupti. Ex optio recusandae enim!
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus quam quasi ea, quia atque illum
+                dolor totam dolore maiores doloremque tempore corporis consequuntur, minima facere corrupti. Ex optio
+                recusandae enim!
             </p>
         </div>
     </section>
 
     <section class="catalogo" id="catalogo">
         <h2>Faça sua escolha & Aproveite!</h2>
+
+        <div class="icons">
+            <a href="#" class="hamburguer-icon" id="hamburguer-icon">
+                <img src="./src/images/hamburguer-icon-amarelo.png" alt="hamburguer icon">
+            </a>
+
+            <a href="#" class="pizza-icon" id="pizza-icon">
+                <img src="./src/images/pizza-icon-amarelo.png" alt="pizza icon">
+            </a>
+
+            <a href="#" class="sobremesa-icon" id="sobremesa-icon">
+                <img src="./src/images/bolo-icon-amarelo.png" alt="sobremesa icon">
+            </a>
+        </div>
+
+        <section class="items hamburguers mostrar" id="catalogo-hamburguers">
+            <div class="hamburguer x-tudo">
+                <img src="./src/images/x-tudo.png" alt="hamburguer x-tudo">
+
+                <h4>X-Tudo</h4>
+
+                <button class="btn-comprar">Comprar</button>
+            </div>
+
+            <div class="hamburguer x-bacon">
+                <img src="./src/images/x-bacon.png" alt="hamburguer x-bacon">
+
+                <h4>X-Bacon</h4>
+
+                <button class="btn-comprar">Comprar</button>
+            </div>
+
+            <div class="hamburguer x-salada">
+                <img src="./src//images/x-slada-com-cheddar.png" alt="hamburguer x-salada com cheddar">
+
+                <h4>X-Salada com Cheddar</h4>
+
+                <button class="btn-comprar">Comprar</button>
+            </div>
+        </section>
+
+        <section class="items pizzas" id="catalogo-pizza">
+            <div class="pizza calabresa">
+                <img src="./src//images/pizza-calabresa.png" alt="pizza de calabresa">
+
+                <h4>Pizza de Calabresa</h4>
+
+                <button class="btn-comprar">Comprar</button>
+            </div>
+
+            <div class="pizza queijo">
+                <img src="./src//images/pizza-queijo.png" alt="pizza de queijo">
+
+                <h4>Pizza de Queijo</h4>
+
+                <button class="btn-comprar">Comprar</button>
+            </div>
+
+            <div class="pizza marguerita">
+                <img src="./src/images/pizza-marguerita.png" alt="pizza de marguerita">
+
+                <h4>Pizza de Marguerita</h4>
+
+                <button class="btn-comprar">Comprar</button>
+            </div>
+        </section>
+
+        <section class="items sobremesa " id="sobremesa">
+            <div class="doce macaron">
+                <img src="./src/images/macaron.png" alt="macaron">
+
+                <h4>Macaron</h4>
+
+                <button class="btn-comprar">Comprar</button>
+            </div>
+
+            <div class="doce brownie">
+                <img src="./src/images/brownie.png" alt="brownie">
+
+                <h4>Brownie</h4>
+
+                <button class="btn-comprar">Comprar</button>
+            </div>
+
+            <div class="doce bolo">
+                <img src="./src/images/bolo.png" alt="bolo">
+
+                <h4>Bolo</h4>
+
+                <button class="btn-comprar">Comprar</button>
+            </div>
+        </section>
     </section>
+
+    <footer>
+        <div class="footer-conteudo">
+            <div class="contato">
+                <div class="logo">
+                    <h3>FoodDev</h3>
+                    <img src="./src/images/logo.png" alt="logo FoodDev" class="logo">
+                </div>
+
+                <div class="contato">
+                    <h3>Contato</h3>
+                    <p>+99 99999 9999</p>
+                    <p>email@rmail.com</p>
+                </div>
+            </div>
+
+            <div class="informacao">
+                <h3>Informações</h3>
+                <nav>
+                    <ul>
+                        <li class="informacao-itens"><a href="#">Sobre Nós</a></li>
+                        <li class="informacao-itens"><a href="#">Unidades</a></li>
+                        <li class="informacao-itens"><a href="#">Serviços</a></li>
+                        <li class="informacao-itens"><a href="#">Parcerias</a></li>
+                        <li class="informacao-itens"><a href="#">Suporte</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="redes-sociais">
+                <h3>Redes Sociais</h3>
+                <nav class="ul">
+                    <li><i class="fa-brands fa-instagram"></i></li>
+                    <li><i class="fa-brands fa-facebook"></i></li>
+                    <li><i class="fa-brands fa-twitter"></i></li>
+                    <li><i class="fa-brands fa-tiktok"></i></li>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FONT AWESOME -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
+        integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 
 </html>
