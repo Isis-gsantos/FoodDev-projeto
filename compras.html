@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodDev</title>
+    <link rel="shortcut icon" href="./src/images/logo.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/style-compras.css">
+</head>
+
+<body>
+    <main class="container">
+        <section class="verificacao">
+            <img src="./src/images/cartao.png" alt="cartao">
+
+            <form class="formulario">
+                <label for="nome">Nome</label>
+                <input id="nome" type="text" placeholder="NOME">
+
+                <label for="numero-cartao">Número do Cartão</label>
+                <input id="numero-cartao" type="text" placeholder="0000 0000 0000 0000">
+
+                <div class="campos-pequenos">
+                    <div>
+                        <label for="mes">Mês</label>
+                        <input id="mes" type="text" placeholder="00">
+                    </div>
+
+                    <div>
+                        <label for="ano">Ano</label>
+                        <input id="ano" type="text" placeholder="00">
+                    </div>
+
+                    <div>
+                        <label for="cvv">CVV</label>
+                        <input id="cvv" type="text" placeholder="CVV">
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <section class="formulario-validado">
+            <img class="selo" src="./src/images/verificado.png" alt="selo verificado">
+
+            <p>
+                Seu pedido foi realizado, previsão de entrega de 40 minutos. <br>
+                Contato: (000) 9999 9999
+            </p>
+        </section>
+    </main>
+
+    <img class="motoqueiro" src="./src/images/motoqueiro.png" alt="motoqueiro delivery">
+</body>
+
+</html>

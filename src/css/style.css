@@ -1,10 +1,10 @@
 body {
   display: grid;
   grid-template-areas: "header header header"
-                       "home home home"
-                       "sobre sobre sobre"
-                       "catalogo catalogo catalogo"
-                       "contato contato contato";
+    "home home home"
+    "sobre sobre sobre"
+    "catalogo catalogo catalogo"
+    "contato contato contato";
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(5);
 }
@@ -27,6 +27,14 @@ body {
 .header h1,
 .header-conteudo a {
   color: #ffffff;
+}
+
+.header h1 {
+  transition: 0.4s ease;
+}
+
+.header:hover h1 {
+  color: #ffbe0b;
 }
 
 .header .logo img {
@@ -60,6 +68,67 @@ body {
 .header-conteudo a:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+/* RESPONSIVE-HAMBURGUER */
+.header .menu {
+  display: none;
+  width: 60px;
+  height: 60px;
+  align-self: flex-end;
+}
+
+.header nav label {
+  display: flex;
+  flex-direction: column;
+}
+
+.header .menu-hamburguer {
+  display: block;
+  background-color: #ffffff;
+  position: relative;
+  top: 29px;
+  left: 15px;
+  width: 30px;
+  height: 2px;
+  transition: 0.5s ease-in-out;
+}
+
+.header .menu-hamburguer:before,
+.header .menu-hamburguer:after {
+  content: "";
+  background-color: #ffffff;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: 0.2s ease-in-out;
+}
+
+.header .menu-hamburguer:before {
+  top: -10px;
+}
+
+.header .menu-hamburguer:after {
+  bottom: -10px;
+}
+
+.header input {
+  display: none;
+}
+
+.header input:checked~label .menu-hamburguer {
+  transform: rotate(45deg);
+}
+
+.header input:checked~label .menu-hamburguer:before {
+  transform: rotate(90deg);
+  top: 0;
+}
+
+.header input:checked~label .menu-hamburguer:after {
+  transform: rotate(90deg);
+  bottom: 0;
 }
 
 /* HOME - CARROSSEL DE IMAGENS */
@@ -121,6 +190,12 @@ body {
   z-index: 2;
 }
 
+.home .seta-voltar img,
+.home .seta-avancar img {
+  max-width: 35px;
+  height: 50px;
+}
+
 .seta-voltar {
   left: 4%;
 }
@@ -148,11 +223,12 @@ body {
 }
 
 .conteudo-imagem p {
-  font: 500;
+  font-weight: 500;
 }
 
 .btn-peca-ja {
   background-color: #ffbe0b;
+  color: #000000;
   padding: 10px 40px;
   border-radius: 20px;
   cursor: pointer;
@@ -241,7 +317,7 @@ body {
 
 .icons .hamburguer-icon:hover img,
 .icons .pizza-icon:hover img,
-.icons .sobremesa-icon:hover {
+.icons .sobremesa-icon:hover img {
   transform: scale(1.1);
 }
 
@@ -261,6 +337,7 @@ body {
 .pizza img,
 .sobremesa img {
   max-width: 250px;
+  z-index: 2;
 }
 
 .hamburguer,
@@ -310,24 +387,28 @@ body {
   margin: 20px 0;
   font-size: 24px;
   font-weight: 700;
+  text-align: center;
+  color: #000000;
 }
 
 .catalogo .items .btn-comprar {
   background-color: #ffbe0b;
+  color: #000000;
   padding: 10px 30px;
   border-radius: 20px;
   cursor: pointer;
   font-size: 16px;
   font-weight: 700;
   transition: 0.4 ease-in;
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 
 /* FOOTER */
 footer {
   grid-area: contato;
-  padding: 40px;
-  background: linear-gradient(to top, #000000, #354f52)
+  padding: 30px;
+  /* background: linear-gradient(to top, #000000, #354f52) */
+  background-color: #000000;
 }
 
 .footer-conteudo {
@@ -336,17 +417,42 @@ footer {
   gap: 20px;
 }
 
+.footer-conteudo .contato,
+.footer-conteudo .informacao,
+.footer-conteudo .redes-sociais {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .footer-conteudo .logo {
   display: flex;
   align-items: center;
   font-size: 20px;
   gap: 8px;
+  margin-bottom: 10px;
 }
 
 .footer-conteudo h3 {
   color: #ffbe0b;
+  margin-bottom: 8px;
 }
 
 .footer-conteudo .logo img {
   max-width: 40px;
+}
+
+.footer-conteudo .informacao li,
+.footer-conteudo .redes-sociais li {
+  margin: 8px 0;
+}
+
+.footer-conteudo .contato p {
+  margin-bottom: 5px;
+}
+
+.footer-conteudo .redes-sociais li {
+  font-size: 20px;
+  cursor: pointer;
 }

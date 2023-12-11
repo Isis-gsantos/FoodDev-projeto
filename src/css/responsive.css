@@ -1,0 +1,98 @@
+@media (max-width: 900px) {
+    .icons img {
+        max-width: 60px;
+    }
+
+    .catalogo .items.mostrar {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hamburguer,
+    .pizza,
+    .doce {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 625px) {
+    .header .menu {
+        display: block;
+    }
+
+    .header nav ul {
+        display: none;
+    }
+
+    .header input:checked~ul {
+        display: block;
+    }
+
+    .header nav {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 3;
+    }
+
+    .header nav ul {
+        width: 130px;
+        background-color: #354f52;
+        padding: 15px;
+    }
+
+    .header nav ul a {
+        text-align: center;
+        padding: 20px;
+        display: block;
+    }
+
+    .home .seta-voltar img,
+    .home .seta-avancar img {
+        max-width: 35px;
+    }
+
+    .sobre {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .conteudo-imagem {
+        max-width: 350px;
+        margin-left: 100px;
+    }
+}
+
+@media (max-width: 425px) {
+    .conteudo-imagem {
+        max-width: 300px;
+        margin-left: 70px;
+    }
+
+    .conteudo-imagem h2 {
+        font-size: 35px;
+    }
+
+    .conteudo-imagem p {
+        font-size: 13px;
+    }
+
+    .catalogo h2 {
+        text-align: center;
+    }
+
+    .footer-conteudo {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 375px) {
+    .conteudo-imagem {
+        max-width: 250px;
+    }
+
+    .conteudo-imagem h2 {
+        font-size: 25px;
+    }
+}
