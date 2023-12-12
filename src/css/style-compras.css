@@ -3,7 +3,6 @@
 }
 
 body {
-    /* background-color: #c8b6ff; */
     background: linear-gradient(to bottom, #c8b6ff, #e7c6ff);
     display: flex;
     flex-direction: column;
@@ -12,8 +11,34 @@ body {
     min-height: 100vh;
 }
 
+.voltar {
+    margin-bottom: 20px;
+    color: var(--preto);
+    position: relative;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.voltar::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--branco);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.voltar:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
 .container {
-    background-color: #ffffff;
+    background-color: var(--branco);
     border-radius: 30px;
     padding: 30px;
     box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
@@ -43,6 +68,26 @@ body {
     margin-bottom: 10px;
   }
 
+input.invalid {
+    border: 1px solid red; 
+}
+
+input.valid {
+    border: 1px solid green; 
+}
+
+.invalid + span:after {
+    content: '* Campo obrigatório'; 
+    color: red;
+    display: block;
+    font-size: 10px;
+    margin-top: -10px;
+}
+
+.valid + span:after {
+    content: ''; 
+}
+
 .formulario {
     max-width: 250px;
     display: flex;
@@ -57,6 +102,24 @@ body {
 
 .campos-pequenos input {
     max-width: 50px;
+}
+
+.btn-validar {
+    margin-top: 20px;
+    padding: 10px;
+    max-width: 100px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #9a8c98;
+    color: var(--branco);
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.4s ease;
+}
+
+.btn-validar:hover {
+    background-color: #cdb4db;
 }
 
 /* FORMULARIO VALIDADO */

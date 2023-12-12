@@ -9,6 +9,10 @@ body {
   grid-template-rows: repeat(5);
 }
 
+h2, h3 {
+  color: var(--amarelo);
+}
+
 /* HEADER */
 .header {
   grid-area: header;
@@ -24,17 +28,12 @@ body {
   gap: 8px;
 }
 
-.header h1,
-.header-conteudo a {
-  color: #ffffff;
-}
-
-.header h1 {
+.header .logo h1 {
   transition: 0.4s ease;
 }
 
-.header:hover h1 {
-  color: #ffbe0b;
+.header .logo:hover h1 {
+  color: var(--amarelo);
 }
 
 .header .logo img {
@@ -59,7 +58,7 @@ body {
   bottom: -2px;
   width: 100%;
   height: 2px;
-  background-color: #ffbe0b;
+  background-color: var(--amarelo);
   transform: scaleX(0);
   transform-origin: bottom right;
   transition: transform 0.3s ease-out;
@@ -85,7 +84,7 @@ body {
 
 .header .menu-hamburguer {
   display: block;
-  background-color: #ffffff;
+  background-color: var(--branco);
   position: relative;
   top: 29px;
   left: 15px;
@@ -97,7 +96,7 @@ body {
 .header .menu-hamburguer:before,
 .header .menu-hamburguer:after {
   content: "";
-  background-color: #ffffff;
+  background-color: var(--branco);
   display: block;
   width: 100%;
   height: 100%;
@@ -212,13 +211,11 @@ body {
 
 .conteudo-imagem h2,
 .conteudo-imagem p {
-  color: #ffffff;
   margin-bottom: 20px;
 }
 
 .conteudo-imagem h2 {
   font-size: 40px;
-  color: #ffbe0b;
   font-weight: 700;
 }
 
@@ -227,8 +224,8 @@ body {
 }
 
 .btn-peca-ja {
-  background-color: #ffbe0b;
-  color: #000000;
+  background-color: var(--amarelo);
+  color: var(--preto);
   padding: 10px 40px;
   border-radius: 20px;
   cursor: pointer;
@@ -238,7 +235,7 @@ body {
 }
 
 .btn-peca-ja:hover {
-  background-color: #ffd60a;
+  background-color: var(--amarelo-claro);
 }
 
 /* SOBRE */
@@ -260,14 +257,12 @@ body {
 }
 
 .sobre .item h3 {
-  color: #ffbe0b;
   font-size: 30px;
   font-weight: 700;
   margin-bottom: 20px;
 }
 
 .sobre .item p {
-  color: #ffffff;
   font-weight: 500;
 }
 
@@ -300,7 +295,6 @@ body {
   margin: 30px 0;
   font-size: 30px;
   font-weight: 700;
-  color: #ffbe0b;
 }
 
 .icons {
@@ -343,7 +337,7 @@ body {
 .hamburguer,
 .pizza,
 .doce {
-  background-color: #ffffff;
+  background-color: var(--branco);
   text-align: center;
   padding: 30px 10px;
   border-radius: 90px;
@@ -388,18 +382,17 @@ body {
   font-size: 24px;
   font-weight: 700;
   text-align: center;
-  color: #000000;
+  color: var(--preto);
 }
 
 .catalogo .items .btn-comprar {
-  background-color: #ffbe0b;
-  color: #000000;
+  background-color: var(--amarelo);
+  color: var(--preto);
   padding: 10px 30px;
   border-radius: 20px;
   cursor: pointer;
   font-size: 16px;
   font-weight: 700;
-  transition: 0.4 ease-in;
   margin: 10px 0;
 }
 
@@ -407,8 +400,7 @@ body {
 footer {
   grid-area: contato;
   padding: 30px;
-  /* background: linear-gradient(to top, #000000, #354f52) */
-  background-color: #000000;
+  background-color: var(--preto);
 }
 
 .footer-conteudo {
@@ -435,7 +427,6 @@ footer {
 }
 
 .footer-conteudo h3 {
-  color: #ffbe0b;
   margin-bottom: 8px;
 }
 
@@ -443,8 +434,7 @@ footer {
   max-width: 40px;
 }
 
-.footer-conteudo .informacao li,
-.footer-conteudo .redes-sociais li {
+.footer-conteudo li {
   margin: 8px 0;
 }
 
@@ -455,4 +445,8 @@ footer {
 .footer-conteudo .redes-sociais li {
   font-size: 20px;
   cursor: pointer;
+}
+
+.custom-icon {
+  color: var(--amarelo);
 }
