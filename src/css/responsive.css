@@ -64,9 +64,16 @@
 }
 
 @media (max-width: 425px) {
+
+    .home .seta-voltar img,
+    .home .seta-avancar img {
+        max-width: 30px;
+        height: 40px;
+    }
+
     .conteudo-imagem {
         max-width: 300px;
-        margin-left: 70px;
+        margin-left: 68px;
     }
 
     .conteudo-imagem h2 {

@@ -9,6 +9,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    position: relative;
 }
 
 .voltar {
@@ -16,7 +17,7 @@ body {
     color: var(--preto);
     position: relative;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .voltar::after {

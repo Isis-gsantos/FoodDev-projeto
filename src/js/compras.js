@@ -14,13 +14,13 @@ btnValidar.addEventListener('click', () => {
         const inputValue = input.value.trim();
 
         if (input.id === 'nome') {
-            validateNonEmpty(input, inputValue);
+            validarNome(input, inputValue);
         } else if (input.id === 'numero-cartao') {
-            validateCardNumber(input, inputValue);
+            validarNumeroCartao(input, inputValue);
         } else if (input.id === 'mes' || input.id === 'ano') {
-            validateTwoDigit(input, inputValue);
+            validacaoDoisDigitos(input, inputValue);
         } else if (input.id === 'cvv') {
-            validateThreeDigit(input, inputValue);
+            validacaoTresDigitos(input, inputValue);
         }
 
         if (input.classList.contains('invalid')) {
@@ -33,45 +33,45 @@ btnValidar.addEventListener('click', () => {
         verificacao.style.display = 'none'; 
         formularioValidado.style.display = 'block';  
         motoqueiro.style.display = 'block';  
-    }
+    };
 });
 
-function validateNonEmpty(input, value) {
+function validarNome(input, value) {
     if (value !== '') {
         setValidationClasses(input, 'valid');
     } else {
         setValidationClasses(input, 'invalid');
-    }
-}
+    };
+};
 
-function validateCardNumber(input, value) {
+function validarNumeroCartao(input, value) {
     const regexNumeros = /^[0-9]{16}$/;
     if (regexNumeros.test(value)) {
         setValidationClasses(input, 'valid');
     } else {
         setValidationClasses(input, 'invalid');
-    }
-}
+    };
+};
 
-function validateTwoDigit(input, value) {
+function validacaoDoisDigitos(input, value) {
     const regexTwoDigits = /^[0-9]{2}$/;
     if (regexTwoDigits.test(value)) {
         setValidationClasses(input, 'valid');
     } else {
         setValidationClasses(input, 'invalid');
-    }
-}
+    };
+};
 
-function validateThreeDigit(input, value) {
+function validacaoTresDigitos(input, value) {
     const regexThreeDigits = /^[0-9]{3}$/;
     if (regexThreeDigits.test(value)) {
         setValidationClasses(input, 'valid');
     } else {
         setValidationClasses(input, 'invalid');
-    }
-}
+    };
+};
 
 function setValidationClasses(element, className) {
     element.classList.remove('valid', 'invalid');
     element.classList.add(className);
-}
+};
