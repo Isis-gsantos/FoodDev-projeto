@@ -1,6 +1,13 @@
 /// <reference types="Cypress" />
 
 describe('FoodDev Main Page', () => {
+  
+  const name = 'Lucas'
+  const cardNumber = 1234123412341234
+  const month = 11
+  const year = 30
+  const cvv = 123
+
    beforeEach(()=> {
     cy.visit('./index.html')
    }) 
@@ -44,5 +51,31 @@ describe('FoodDev Main Page', () => {
     cy.get('.x-tudo > img').trigger('mouseover').should('have.css', 'scale')
     cy.get('.x-bacon > img').trigger('mouseover').should('have.css', 'scale')
     cy.get('.x-salada > img').trigger('mouseover').should('have.css', 'scale')
+  })
+
+  it('Goes to the buying page and  fill the form correctly, going back to the main page by the back icon', ()=> {
+    cy.get('.x-bacon > .btn-comprar').click()
+    cy.get('.voltar').should('be.visible')
+    cy.get('#nome').type(name).should('have.value', name)
+    cy.get('#numero-cartao').type(cardNumber).should('have.value', cardNumber)
+    cy.get('#mes').type(month).should('have.value', month)
+    cy.get('#ano').type(year).should('have.value', year)
+    cy.get('#cvv').type(cvv).should('have.value', cvv)
+    cy.get('#btn-validar').click()
+    cy.get('.motoqueiro').should('be.visible')
+    cy.get('.voltar').click()
+    cy.contains('Home').should('be.visible')
+  })
+
+  it('Goes to the buying page and fails to fill the form correctly', ()=> {
+    cy.get('.x-bacon > .btn-comprar').click()
+    cy.get('.voltar').should('be.visible')
+    cy.get('#nome').type('Lucas').should('have.value', 'Lucas')
+    cy.get('#numero-cartao').type(1).should('have.value', '1')
+    cy.get('#mes').type('1').should('have.value', '1')
+    cy.get('#ano').type('2').should('have.value', '2')
+    cy.get('#cvv').type('4444').should('have.value', '4444')
+    cy.get('#btn-validar').click()
+    cy.get('.motoqueiro').should('not.be.visible')
   })
 })
